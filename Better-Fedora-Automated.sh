@@ -78,11 +78,3 @@ xdg-settings set default-web-browser com.google.Chrome.desktop
 
 # Set up templates
 touch ~/Templates/new.txt
-
-# Apply latest updates
-if [[ "$VARIANT_ID" == "silverblue" || "kinoite" || "sericea"]]
-   then
-      rpm-ostree update
-   else
-      exit
-fi

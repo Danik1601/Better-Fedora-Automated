@@ -9,9 +9,9 @@ gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize
 # gnome-extensions disable "dash-to-dock@micxgx.gmail.com"
 
 # Install "Dash to Panel" by @charlesg99 and @jderose9
-busctl --user call org.gnome.Shell.Extensions /org/gnome/Shell/Extensions org.gnome.Shell.Extensions InstallRemoteExtension s dash-to-panel@jderose9.github.com
+# busctl --user call org.gnome.Shell.Extensions /org/gnome/Shell/Extensions org.gnome.Shell.Extensions InstallRemoteExtension s dash-to-panel@jderose9.github.com
 # Enable "Dash to Panel" by @charlesg99 and @jderose9
-gnome-extensions enable "dash-to-panel@jderose9.github.com"
+# gnome-extensions enable "dash-to-panel@jderose9.github.com"
 
 # Add Flathub repository:
 flatpak --system remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo

@@ -14,16 +14,16 @@ busctl --user call org.gnome.Shell.Extensions /org/gnome/Shell/Extensions org.gn
 gnome-extensions enable "dash-to-panel@jderose9.github.com"
 
 # Add Flathub repository:
-sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak --system remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 # Enable Flathub repository:
-sudo flatpak remote-modify --enable flathub
+flatpak --system remote-modify --enable flathub
 
 # Disable Fedora repository:
-sudo flatpak remote-modify --disable fedora
+flatpak --system remote-modify --disable fedora
 
 # Remove all applications and runtimes:
-sudo flatpak uninstall --all -y
+flatpak --system uninstall --all -y
 
 # Install back Fedora default applications from Flathub:
 flatpak install flathub -y org.fedoraproject.MediaWriter &&
@@ -82,7 +82,7 @@ touch ~/Templates/new.txt
 # Apply latest updates
 if [[ "$VARIANT_ID" == "silverblue" || "kinoite" || "sericea"]]
    then
-      sudo rpm-ostree update
+      rpm-ostree update
    else
       exit
 fi
